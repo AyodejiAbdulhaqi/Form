@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="shortcut icon" href="profile pictures.jpg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Add this custom style */
+        #home {
+            background-image: url(profile\ pictures.jpg); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body class="body bg-gray-100 text-gray-800">
+    <!-- Navbar -->
+    <nav class="bg-transparent p-4 fixed w-full">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-gray-300 text-3xl font-bold">My <span class="text-red-500">Portfolio</span></div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#home" class="text-gray-300 hover:text-red-500 text-xl">Home</a>
+                <a href="#about" class="text-gray-300 hover:text-red-500 text-xl">About</a>
+                <a href="#projects" class="text-gray-300 hover:text-red-500 text-xl">Projects</a>
+                <a href="#contact" class="text-gray-300 hover:text-red-500 text-xl">Contact</a>
+            </div>
+            <button id="burger" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+        <div class="md:hidden flex flex-col space-y-4 mt-4 text-center" id="mobile-nav" style="display: none;">
+            <a href="#home" class="text-white hover:text-red-500">Home</a>
+            <a href="#about" class="text-white hover:text-red-500">About</a>
+            <a href="#projects" class="text-white hover:text-red-500">Projects</a>
+            <a href="#contact" class="text-white hover:text-red-500">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="h-screen flex items-center justify-center text-white">
+        <div class="bg-black bg-opacity-50 p-6 rounded">
+            <h1 class="text-4xl md:text-6xl font-bold">Welcome to My Portfolio</h1>
+            <p class="mt-4 text-lg md:text-2xl">Showcasing my work and projects</p>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="container mx-auto my-16 p-4 bg-white">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-lg">I'm a passionate web developer with experience in creating dynamic and responsive websites using the latest technologies. I enjoy solving problems and continuously learning to improve my skills.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto my-16 p-4 bg-gray-100">
+        <h2 class="text-3xl font-bold mb-4">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-2">Project 1</h3>
+                <p class="text-lg">A brief description of the project.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-lg">
+                <h3 class="text-2xl font-bold mb-2">Project 2</h3>
+                <p class="text-lg">A brief description of the project.</p>
+            </div>
+            <!-- Add more project cards as needed -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container mx-auto my-16 p-4">
+        <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+        <form action="#" method="POST" class="bg-white p-6 rounded-lg shadow-lg">
+            <div class="mb-4">
+                <label for="name" class="block text-lg font-medium">Name</label>
+                <input type="text" id="name" name="name" class="w-full mt-1 p-2 border border-gray-300 rounded-lg">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-lg font-medium">Email</label>
+                <input type="email" id="email" name="email" class="w-full mt-1 p-2 border border-gray-300 rounded-lg">
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-lg font-medium">Message</label>
+                <textarea id="message" name="message" class="w-full mt-1 p-2 border border-gray-300 rounded-lg"></textarea>
+            </div>
+            <button type="submit" class="bg-gray-800 text-white p-2 rounded-lg">Send</button>
+        </form>
+    </section>
+    <script defer src="main.js"></script>
+</body>
+</html>
